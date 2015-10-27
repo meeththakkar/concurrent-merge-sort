@@ -3,6 +3,7 @@
 Simple concurrent implementation of merge sort.
 
 Following program demostrates following Aspects of programming
+<br/>
 1. concurrent programming. 
 2. basic spring IoC framework. 
 3. use of logging.
