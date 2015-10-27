@@ -80,7 +80,7 @@ public class CallableMergeSortTest extends TestCase {
 		List<String> list = new ArrayList<String>();
 		
 	
-		int number = 200000;
+		int number = 20000;
 		
 		
 		RandomNamePopulator.populateRandomNames(list, number);

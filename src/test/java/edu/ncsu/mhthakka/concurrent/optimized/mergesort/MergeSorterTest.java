@@ -134,7 +134,7 @@ public class MergeSorterTest extends TestCase {
 
 		List<String> list = new ArrayList<String>();
 
-		int number = 50000;
+		int number = 20000;
 
 		RandomNamePopulator.populateRandomNames(list, number);
 
