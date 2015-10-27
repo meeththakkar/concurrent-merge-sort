@@ -38,8 +38,8 @@ public class MergeSorterTest extends TestCase {
 		MergeSorterFactory factory = context.getBean(MergeSorterFactory.class);
 		MergeSortCallBack callback = new MergeSortCallBack() {
 			public void onSortComplete(List<String> sortedList) {
-				context.close();
-				System.exit(0);
+			//	context.close();
+			//	System.exit(0);
 
 			}
 
@@ -111,7 +111,7 @@ public class MergeSorterTest extends TestCase {
 				}
 				
 				context.close();
-				System.exit(0);
+		//System.exit(0);
 
 			}
 
