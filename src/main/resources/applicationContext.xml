@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd 
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+
+
+<!-- Spring's TaskExecutor -->
+<!-- 	<bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="10"/>
+		<property name="maxPoolSize" value="10" />
+	</bean>
+ -->
+
+<!-- we are using java provided task executor. using factory method -->
+	<bean id="taskExecutor" class="java.util.concurrent.Executors" factory-method="newFixedThreadPool">
+	<constructor-arg value="3"></constructor-arg>
+	</bean>
+
+	<bean id="lastNameComparator" class="edu.ncsu.mhthakka.concurrent.optimized.mergesort.util.LastNameComparator" />
+
+	<bean id="mergeSorterFactory" class="edu.ncsu.mhthakka.concurrent.optimized.mergesort.MergeSorterFactory">
+		<constructor-arg ref="taskExecutor" />
+		<constructor-arg ref="lastNameComparator" />
+	</bean>
+
+
+</beans>
