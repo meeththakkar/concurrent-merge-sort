@@ -1,7 +1,7 @@
 # concurrent-merge-sort
 
 Simple concurrent implementation of merge sort.
-
+(CI builds : https://circleci.com/gh/meeththakkar/concurrent-merge-sort )
 Following program demostrates following Aspects of programming
 <br/>
 1. concurrent programming. 
